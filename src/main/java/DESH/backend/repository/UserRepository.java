@@ -1,2 +1,7 @@
-package DESH.backend.repository;public interface UserRepository {
+package DESH.backend.repository;
+
+import DESH.backend.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
 }
