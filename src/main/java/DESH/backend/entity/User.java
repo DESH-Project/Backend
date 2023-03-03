@@ -1,2 +1,4 @@
-package DESH.backend.entity;public class User {
+package DESH.backend.entity;
+
+public class User {
 }
