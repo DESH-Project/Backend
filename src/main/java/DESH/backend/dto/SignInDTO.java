@@ -1,13 +1,10 @@
 package DESH.backend.dto;
 
+import lombok.Getter;
 
-import jakarta.persistence.Entity;
+@Getter
+public class SignInDTO {
 
-public class UserDto {
-
-    private String Name;
-    private String password;
     private String email;
-
-
+    private String password;
 }
