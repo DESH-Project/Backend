@@ -13,8 +13,10 @@ public class SignUpService {
     private final UserRepository userRepository;
 
     public User signUp(SignUpDTO signUpDTO) {
-        return userRepository.save(User.builder()
-                .signUpDTO(signUpDTO)
-                .build());
+        if (userRepository.findByEmail(signUpDTO.getEmail()).isPresent()) {
+            return null;
+        }
+
+        return userRepository.save(signUpDTO.toEntity());
     }
 }
