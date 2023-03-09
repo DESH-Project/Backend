@@ -19,6 +19,10 @@ public class SignInService {
         }
         return null;
     }
+    public Long save(SignInDTO signInDTO){
+        User oldUser = userRepository.save(signInDTO.getName(),signInDTO.getEmail(),signInDTO.getPassword()
+                ,signInDTO.getJob());
+        return userRepository.save(oldUser).getId();
 
-
+    }
 }
