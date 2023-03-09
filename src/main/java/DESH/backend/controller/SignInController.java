@@ -16,4 +16,8 @@ public class SignInController {
     public Long signIn(@RequestBody SignInDTO signInDTO){
         return signInService.signIn(signInDTO);
     }
+    @PostMapping("/signin/create")
+    public Long save(@RequestBody SignInDTO signInDTO){
+        return signInService.save(signInDTO);
+    }
 }
